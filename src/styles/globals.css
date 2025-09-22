@@ -187,3 +187,39 @@
 html {
   font-size: var(--font-size);
 }
+
+/* Glass text that subtly blends with the background */
+.glass-wordmark {
+  position: relative;
+  color: rgba(255, 255, 255, 0.92);
+  mix-blend-mode: overlay;
+  isolation: isolate; /* keep blending localized for consistency */
+  -webkit-font-smoothing: antialiased;
+  /* gentle ambient glow to lift from busy frames (not a border) */
+  text-shadow: 0 2px 14px rgba(255, 255, 255, 0.08),
+    0 1px 6px rgba(255, 255, 255, 0.06);
+}
+
+.glass-wordmark::before,
+.glass-wordmark::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* Soft highlight layer */
+.glass-wordmark::before {
+  color: rgba(255, 255, 255, 0.6);
+  mix-blend-mode: screen;
+  filter: blur(1px);
+  opacity: 0.8;
+}
+
+/* Gentle depth/shadow layer */
+.glass-wordmark::after {
+  color: rgba(0, 0, 0, 0.22);
+  mix-blend-mode: multiply;
+  filter: blur(0.5px);
+  opacity: 0.35;
+}

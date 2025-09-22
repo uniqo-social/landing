@@ -26,8 +26,9 @@ export default function App() {
             className="w-50 h-50 md:w-70 md:h-70 mx-auto drop-shadow-lg"
           />
           <h1
-            style={{ fontFamily: "'League Spartan', sans-serif" }}
-            className="text-6xl md:text-8xl text-white font-bold bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text drop-shadow-lg"
+            className="glass-wordmark text-6xl md:text-8xl font-extrabold mx-auto"
+            data-text="UNIQO"
+            style={{ fontFamily: "'League Spartan', sans-serif", letterSpacing: "0.12em" }}
           >
             UNIQO
           </h1>
