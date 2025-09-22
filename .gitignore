@@ -129,5 +129,8 @@ dist
 # Vite build output
 dist
 
+# Vite cache directory
+.vite/
+
 # macOS specific
 .DS_Store
