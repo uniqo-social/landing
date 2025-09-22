@@ -13,6 +13,9 @@ export default function App() {
         className="absolute inset-0 w-full h-full"
       />
 
+      {/* Contrast overlay to improve text readability */}
+      <div className="absolute inset-0 bg-black/30 pointer-events-none" />
+
       {/* Content */}
       <div className="relative z-10 max-w-3xl mx-auto text-center space-y-6">
         {/* Logo and App Name */}
@@ -24,7 +27,7 @@ export default function App() {
           />
           <h1
             style={{ fontFamily: "'League Spartan', sans-serif" }}
-            className="text-8xl font-bold bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text drop-shadow-sm"
+            className="text-8xl text-white font-bold bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text drop-shadow-lg"
           >
             UNIQO
           </h1>
@@ -32,7 +35,7 @@ export default function App() {
 
         {/* Hero Content */}
         <div className="space-y-1">
-          <p className="text-2xl text-white/90 max-w-2xl mx-auto leading-relaxed drop-shadow-sm">
+          <p className="text-md md:text-2xl text-white/90 max-w-2xl mx-auto leading-relaxed drop-shadow-lg">
             A social network that actually brings you closer to
             people.
             <br />
@@ -43,7 +46,7 @@ export default function App() {
 
         {/* Bottom tagline */}
         <div>
-          <p className="text-white/80 italic text-base drop-shadow-sm">
+          <p className="text-white/80 italic text-base drop-shadow-lg">
             "In a world of endless connections, we decided to
             choose breadth over depth"
           </p>
