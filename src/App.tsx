@@ -5,7 +5,7 @@ import UnicornScene from "./components/unicorn";
 export default function App() {
   return (
     <div
-      className="min-h-screen relative flex items-center justify-center p-4 overflow-hidden"
+      className="min-h-[100dvh] relative flex items-center justify-center px-4 md:p-4 overflow-hidden"
     >
       {/* UnicornScene as background */}
       <UnicornScene
