@@ -4,7 +4,9 @@ import UnicornScene from "./components/unicorn";
 
 export default function App() {
   return (
-    <div className="min-h-screen relative flex items-center justify-center p-4 overflow-hidden">
+    <div
+      className="min-h-screen relative flex items-center justify-center p-4 overflow-hidden"
+    >
       {/* UnicornScene as background */}
       <UnicornScene
         projectId="maxeURXzzAdZxKLTDzsU"
@@ -20,8 +22,11 @@ export default function App() {
             alt="Uniqo Logo"
             className="w-70 h-70 mx-auto drop-shadow-lg"
           />
-          <h1 className="text-8xl bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent drop-shadow-sm">
-            Uniqo
+          <h1
+            style={{ fontFamily: "'League Spartan', sans-serif" }}
+            className="text-8xl font-bold bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent drop-shadow-sm"
+          >
+            UNIQO
           </h1>
         </div>
 
@@ -38,7 +43,7 @@ export default function App() {
 
         {/* Bottom tagline */}
         <div>
-          <p className="text-white/80 italic text-lg drop-shadow-sm">
+          <p className="text-white/80 italic text-base drop-shadow-sm">
             "In a world of endless connections, we decided to
             choose breadth over depth"
           </p>
@@ -47,7 +52,7 @@ export default function App() {
         {/* Coming Soon Badge */}
         <Badge
           variant="secondary"
-          className="mx-auto text-lg px-6 py-2 bg-white/20 text-white border-white/30 backdrop-blur-sm"
+          className="mx-auto text-base px-6 py-2 bg-white/20 text-white border-white/30 backdrop-blur-sm"
         >
           Coming Soon
         </Badge>
