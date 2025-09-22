@@ -47,9 +47,12 @@ export default function App() {
 
         {/* Bottom tagline */}
         <div>
-          <p className="text-sm md:text-xl text-white/80 italic drop-shadow-lg max-w-xs mx-auto md:max-w-none">
-            "In a world of endless connections, we decided to
-            choose breadth over depth"
+          <p
+            className="text-3xl sm:text-5xl text-white/80 drop-shadow-lg mx-auto md:max-w-none font-quote"
+            style={{ fontFamily: "'Amatic SC', cursive" }}
+          >
+            "...in a world of endless connections,<br />we decided to
+            choose breadth over depth."
           </p>
         </div>
 
