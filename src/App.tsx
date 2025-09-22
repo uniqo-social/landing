@@ -1,4 +1,4 @@
-import { Badge } from "./components/ui/badge";
+import { GlassCard } from "@developer-hub/liquid-glass";
 import uniqoLogo from "figma:asset/538c265f96e3133ede1c7c8ce9bdb2c610b03bb2.png";
 import UnicornScene from "./components/unicorn";
 
@@ -14,7 +14,7 @@ export default function App() {
       />
 
       {/* Contrast overlay to improve text readability */}
-      <div className="absolute inset-0 bg-black/20 pointer-events-none" />
+      <div className="absolute inset-0 bg-black/10 pointer-events-none" />
 
       {/* Content */}
       <div className="relative z-10 max-w-3xl mx-auto text-center space-y-6">
@@ -56,13 +56,19 @@ export default function App() {
           </p>
         </div>
 
-        {/* Coming Soon Badge */}
-        <Badge
-          variant="secondary"
-          className="mx-auto mt-4 text-base px-6 py-2 liquid-glass"
-        >
-          Coming Soon
-        </Badge>
+        {/* Coming Soon Button (Liquid Glass) */}
+        <div className="mx-auto mt-12 w-fit">
+          <GlassCard
+            displacementScale={120}
+            blurAmount={0.1}
+            cornerRadius={10}
+            padding="10px 22px"
+            className="cursor-default select-none"
+            shadowMode={false}
+          >
+            <span className="text-base text-white font-semibold tracking-wide">Coming Soon</span>
+          </GlassCard>
+        </div>
       </div>
     </div>
   );
