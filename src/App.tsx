@@ -59,7 +59,7 @@ export default function App() {
         {/* Coming Soon Badge */}
         <Badge
           variant="secondary"
-          className="mx-auto text-base px-6 py-2 bg-white/20 text-white border-white/30 backdrop-blur-sm"
+          className="mx-auto mt-4 text-base px-6 py-2 liquid-glass"
         >
           Coming Soon
         </Badge>
