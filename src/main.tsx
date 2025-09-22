@@ -28,15 +28,34 @@ if (typeof document !== "undefined") {
         zh: "zh_CN",
         ja: "ja_JP",
         es: "es_ES",
-        de: "de_DE"
+        de: "de_DE",
+        "pt-BR": "pt_BR",
+        "es-419": "es_LA",
+        "zh-TW": "zh_TW",
+        ru: "ru_RU",
+        ar: "ar_AR",
+        ko: "ko_KR",
+        no: "no_NO",
+        sv: "sv_SE",
+        da: "da_DK",
+        pl: "pl_PL",
+        nl: "nl_NL",
+        ga: "ga_IE",
       };
       ogLocale.setAttribute("content", map[i18n.resolvedLanguage || "en"] || "en_US");
     }
   };
+  const applyDir = () => {
+    const rtlLangs = new Set(["ar", "he", "fa", "ur"]);
+    const lng = i18n.resolvedLanguage || "en";
+    document.documentElement.dir = rtlLangs.has(lng) ? "rtl" : "ltr";
+  };
   updateMeta();
+  applyDir();
   i18n.on("languageChanged", (lng) => {
     document.documentElement.lang = lng;
     updateMeta();
+    applyDir();
   });
 }
 

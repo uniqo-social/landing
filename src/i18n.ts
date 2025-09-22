@@ -11,6 +11,17 @@ import zh from "./locales/zh.json";
 import ja from "./locales/ja.json";
 import es from "./locales/es.json";
 import de from "./locales/de.json";
+import ptBR from "./locales/pt-BR.json";
+import zhTW from "./locales/zh-TW.json";
+import ru from "./locales/ru.json";
+import ar from "./locales/ar.json";
+import ko from "./locales/ko.json";
+import no from "./locales/no.json";
+import sv from "./locales/sv.json";
+import da from "./locales/da.json";
+import pl from "./locales/pl.json";
+import nl from "./locales/nl.json";
+import ga from "./locales/ga.json";
 
 i18n
   .use(LanguageDetector)
@@ -26,9 +37,42 @@ i18n
       ja: { translation: ja },
       es: { translation: es },
       de: { translation: de },
+      "pt-BR": { translation: ptBR },
+      "zh-TW": { translation: zhTW },
+      ru: { translation: ru },
+      ar: { translation: ar },
+      ko: { translation: ko },
+      no: { translation: no },
+      sv: { translation: sv },
+      da: { translation: da },
+      pl: { translation: pl },
+      nl: { translation: nl },
+      ga: { translation: ga },
     },
     fallbackLng: "en",
-    supportedLngs: ["en", "it", "fr", "ca", "pt", "zh", "ja", "es", "de"],
+    supportedLngs: [
+      "en",
+      "it",
+      "fr",
+      "ca",
+      "pt",
+      "zh",
+      "ja",
+      "es",
+      "de",
+      "pt-BR",
+      "es-419",
+      "zh-TW",
+      "ru",
+      "ar",
+      "ko",
+      "no",
+      "sv",
+      "da",
+      "pl",
+      "nl",
+      "ga",
+    ],
     interpolation: { escapeValue: false },
     detection: {
       // Prefer explicit query param, then browser, then html tag
