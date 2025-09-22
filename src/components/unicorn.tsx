@@ -38,6 +38,23 @@ export default function UnicornScene({
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
+    const postInitializationHacks = () => {
+      // Adjust canvas height
+      if (elementRef.current) {
+        const canvas = elementRef.current.querySelector('canvas');
+        if (canvas) {
+          const currentHeight = canvas.clientHeight;
+          canvas.style.height = `${currentHeight * 1.1}px`;
+        }
+      }
+
+      // Remove the badge
+      const badge = document.querySelector('a[href*="unicorn.studio"]');
+      if (badge) {
+        badge.remove();
+      }
+    };
+
     const initializeScript = (callback: () => void) => {
       const version = '1.4.31';
 
@@ -128,6 +145,7 @@ export default function UnicornScene({
         if (ourScene) {
           sceneRef.current = ourScene;
           setError(null); // Clear any previous errors
+          postInitializationHacks(); // Run hacks after scene is initialized
         } else {
           setError('Could not find matching scene');
         }
@@ -143,6 +161,13 @@ export default function UnicornScene({
       });
     }, 50);
 
+    const element = elementRef.current;
+    let resizeObserver: ResizeObserver;
+    if (element) {
+      resizeObserver = new ResizeObserver(postInitializationHacks);
+      resizeObserver.observe(element);
+    }
+
     return () => {
       clearTimeout(timeoutId);
       if (sceneRef.current?.destroy) {
@@ -156,6 +181,9 @@ export default function UnicornScene({
       if (jsonFilePath) {
         const script = document.getElementById(scriptId.current);
         script?.remove();
+      }
+      if (element && resizeObserver) {
+        resizeObserver.unobserve(element);
       }
     };
   }, [projectId, jsonFilePath, scale, dpi]);
