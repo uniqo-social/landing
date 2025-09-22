@@ -1,4 +1,3 @@
-import { defineProperties } from "figma:react";
 
 'use client';
 
@@ -182,25 +181,3 @@ export default function UnicornScene({
     </div>
   );
 }
-defineProperties(UnicornScene, {
-  projectId: {
-    label: "Project Id",
-    type: "string",
-    defaultValue: "Add your project Id",
-  },
-  scale: {
-    type: 'number',
-    label: "Scale",
-    defaultValue: 1
-  },
-  dpi: {
-    type: 'number',
-    label: "DPI",
-    defaultValue: 1.5
-  },
-  fps: {
-    type: 'number',
-    label: "FPS",
-    defaultValue: 60
-  }
-});
