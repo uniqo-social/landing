@@ -1,8 +1,10 @@
 import { GlassCard } from "@developer-hub/liquid-glass";
 import uniqoLogo from "figma:asset/logo.png";
 import UnicornScene from "./components/unicorn";
+import { Trans, useTranslation } from "react-i18next";
 
 export default function App() {
+  const { t } = useTranslation();
   return (
     <div
       className="min-h-[100dvh] relative flex items-center justify-center px-4 md:p-4 overflow-hidden"
@@ -37,11 +39,13 @@ export default function App() {
         {/* Hero Content */}
         <div className="space-y-1">
           <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto leading-relaxed drop-shadow-lg">
-            A social network that <i className="font-accent lowercase text-3xl mr-1">actually</i> brings you closer to
-            people.
-            <br className="hidden md:block" />{" "}
-            Quality over quantity. Real meetings over digital
-            metrics.
+            <Trans
+              i18nKey="hero.main"
+              components={[
+                <i key="i" className="font-accent lowercase text-3xl mr-1" />,
+                <br key="br" className="hidden md:block" />,
+              ]}
+            />
           </p>
         </div>
 
@@ -51,8 +55,7 @@ export default function App() {
             className="text-3xl sm:text-4xl text-white/80 drop-shadow-lg mx-auto md:max-w-none font-normal"
             style={{ fontFamily: "'Amatic SC', cursive" }}
           >
-            "...in a world of endless connections,<br />we decided to
-            choose breadth over depth."
+            <Trans i18nKey="tagline" components={[<br key="br" />]} />
           </p>
         </div>
 
@@ -66,7 +69,7 @@ export default function App() {
             className="cursor-default select-none"
             shadowMode={false}
           >
-            <span className="text-base text-white font-semibold tracking-wide">Coming Soon</span>
+            <span className="text-base text-white font-semibold tracking-wide">{t("comingSoon")}</span>
           </GlassCard>
         </div>
       </div>
