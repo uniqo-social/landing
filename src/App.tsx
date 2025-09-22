@@ -1,5 +1,5 @@
 import { GlassCard } from "@developer-hub/liquid-glass";
-import uniqoLogo from "figma:asset/538c265f96e3133ede1c7c8ce9bdb2c610b03bb2.png";
+import uniqoLogo from "figma:asset/logo.png";
 import UnicornScene from "./components/unicorn";
 
 export default function App() {
