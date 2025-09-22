@@ -61,7 +61,6 @@ i18n
       "es",
       "de",
       "pt-BR",
-      "es-419",
       "zh-TW",
       "ru",
       "ar",
