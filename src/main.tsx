@@ -19,7 +19,17 @@ if (typeof document !== "undefined") {
     if (twDesc) twDesc.setAttribute("content", desc);
     const ogLocale = document.querySelector('meta[property="og:locale"]');
     if (ogLocale) {
-      const map: Record<string, string> = { en: "en_US", it: "it_IT" };
+      const map: Record<string, string> = {
+        en: "en_US",
+        it: "it_IT",
+        fr: "fr_FR",
+        ca: "ca_ES",
+        pt: "pt_PT",
+        zh: "zh_CN",
+        ja: "ja_JP",
+        es: "es_ES",
+        de: "de_DE"
+      };
       ogLocale.setAttribute("content", map[i18n.resolvedLanguage || "en"] || "en_US");
     }
   };
