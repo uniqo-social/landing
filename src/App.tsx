@@ -24,7 +24,7 @@ export default function App() {
           />
           <h1
             style={{ fontFamily: "'League Spartan', sans-serif" }}
-            className="text-8xl font-bold bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent drop-shadow-sm"
+            className="text-8xl font-bold bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text drop-shadow-sm"
           >
             UNIQO
           </h1>
