@@ -200,6 +200,29 @@ html {
     0 1px 6px rgba(255, 255, 255, 0.06);
 }
 
+/* Accent font utility for highlighted words */
+.font-accent {
+  font-family: 'Caveat', cursive;
+}
+
+/* On small screens, avoid blending to keep the wordmark crisp */
+@media (max-width: 640px) {
+  .glass-wordmark {
+    color: #fff; /* render solid white on mobile */
+    -webkit-text-fill-color: #fff; /* ensure pure fill on iOS */
+    -webkit-text-stroke: 0; /* no outline */
+    mix-blend-mode: normal; /* disable overlay blending on mobile */
+    /* remove glow to avoid edge-only whiteness */
+    text-shadow: none;
+    -webkit-font-smoothing: auto;
+    text-rendering: optimizeLegibility;
+  }
+  .glass-wordmark::before,
+  .glass-wordmark::after {
+    content: none; /* remove blend layers on mobile */
+  }
+}
+
 .glass-wordmark::before,
 .glass-wordmark::after {
   content: attr(data-text);

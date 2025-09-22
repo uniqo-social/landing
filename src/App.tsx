@@ -36,10 +36,10 @@ export default function App() {
 
         {/* Hero Content */}
         <div className="space-y-1">
-          <p className="text-sm md:text-2xl text-white/90 max-w-2xl mx-auto leading-relaxed drop-shadow-lg">
-            A social network that actually brings you closer to
+          <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto leading-relaxed drop-shadow-lg">
+            A social network that <i className="font-accent lowercase text-3xl mr-1">actually</i> brings you closer to
             people.
-            <br />
+            <br className="hidden md:block" />{" "}
             Quality over quantity. Real meetings over digital
             metrics.
           </p>
@@ -48,7 +48,7 @@ export default function App() {
         {/* Bottom tagline */}
         <div>
           <p
-            className="text-3xl sm:text-5xl text-white/80 drop-shadow-lg mx-auto md:max-w-none font-quote"
+            className="text-3xl sm:text-4xl text-white/80 drop-shadow-lg mx-auto md:max-w-none font-normal"
             style={{ fontFamily: "'Amatic SC', cursive" }}
           >
             "...in a world of endless connections,<br />we decided to
