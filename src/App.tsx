@@ -43,7 +43,11 @@ export default function App() {
               i18nKey="hero.main"
               components={[
                 <i key="i" className="font-accent lowercase text-3xl mr-1" />,
-                <br key="br" className="hidden md:block" />,
+                // On small screens show a space; on md+ show a line break
+                <span key="br" className="inline">
+                  <span className="md:hidden">{" "}</span>
+                  <br className="hidden md:block" />
+                </span>,
               ]}
             />
           </p>
