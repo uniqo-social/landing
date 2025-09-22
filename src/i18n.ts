@@ -22,6 +22,8 @@ import da from "./locales/da.json";
 import pl from "./locales/pl.json";
 import nl from "./locales/nl.json";
 import ga from "./locales/ga.json";
+import pa from "./locales/pa.json";
+import hi from "./locales/hi.json";
 
 i18n
   .use(LanguageDetector)
@@ -48,6 +50,8 @@ i18n
       pl: { translation: pl },
       nl: { translation: nl },
       ga: { translation: ga },
+      pa: { translation: pa },
+      hi: { translation: hi },
     },
     fallbackLng: "en",
     supportedLngs: [
@@ -71,6 +75,8 @@ i18n
       "pl",
       "nl",
       "ga",
+      "pa",
+      "hi",
     ],
     interpolation: { escapeValue: false },
     detection: {
