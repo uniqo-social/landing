@@ -38,7 +38,7 @@ export default function App() {
 
         {/* Hero Content */}
         <div className="space-y-1">
-          <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto leading-relaxed drop-shadow-lg">
+          <p className="text-lg sm:text-2xl text-white/90 max-w-2xl mx-auto leading-relaxed drop-shadow-lg">
             <Trans
               i18nKey="hero.main"
               components={[
@@ -52,7 +52,7 @@ export default function App() {
         {/* Bottom tagline */}
         <div>
           <p
-            className="text-3xl sm:text-4xl text-white/80 drop-shadow-lg mx-auto md:max-w-none font-normal"
+            className="text-2xl min-[428px]:text-3xl sm:text-4xl text-white/80 drop-shadow-lg mx-auto md:max-w-none font-normal"
             style={{ fontFamily: "'Amatic SC', cursive" }}
           >
             <Trans i18nKey="tagline" components={[<br key="br" />]} />
@@ -60,7 +60,7 @@ export default function App() {
         </div>
 
         {/* Coming Soon Button (Liquid Glass) */}
-        <div className="mx-auto mt-12 w-fit">
+        <div className="mx-auto mt-10 w-fit">
           <GlassCard
             displacementScale={120}
             blurAmount={0.1}

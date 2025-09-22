@@ -44,7 +44,7 @@ export default function UnicornScene({
         const canvas = elementRef.current.querySelector('canvas');
         if (canvas) {
           const currentHeight = canvas.clientHeight;
-          canvas.style.height = `${currentHeight * 1.1}px`;
+          canvas.style.height = `${currentHeight * 1.2}px`;
         }
       }
 
